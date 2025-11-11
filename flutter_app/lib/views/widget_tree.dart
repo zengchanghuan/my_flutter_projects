@@ -18,6 +18,12 @@ class WidgetTree extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('app'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.light_mode),
+          ),
+        ],
       ),
       body: ValueListenableBuilder(
           valueListenable: selectedPagesNotifier,

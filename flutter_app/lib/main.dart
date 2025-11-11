@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.teal,
-          brightness: Brightness.dark, // 这里指定暗色
+          brightness: Brightness.light, // 这里指定暗色
         ),
         // useMaterial3: true,
       ),
