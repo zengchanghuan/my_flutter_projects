@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
           seedColor: Colors.teal,
           brightness: Brightness.light, // 这里指定暗色
         ),
-        // useMaterial3: true,
+        useMaterial3: true,
       ),
 
 

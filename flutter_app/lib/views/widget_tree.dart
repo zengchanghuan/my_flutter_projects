@@ -20,8 +20,15 @@ class WidgetTree extends StatelessWidget {
         title: const Text('app'),
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.light_mode),
+            onPressed: () {
+              isDarkModeNotifier.value = !isDarkModeNotifier.value;
+            },
+            icon: ValueListenableBuilder(
+              valueListenable: isDarkModeNotifier,
+              builder: (context, isDarkMode, child) {
+                return Icon(isDarkMode ? Icons.dark_mode : Icons.light_mode);
+              },
+            ),
           ),
         ],
       ),
