@@ -24,14 +24,14 @@ class _ProfilePageState extends State<ProfilePage> {
           onEditingComplete: () => setState(() {}),
         ),
         Text(_controller.text),
-        Checkbox(
+        Checkbox.adaptive(
             value: _isChecked,
             onChanged: (bool? value) {
               setState(() {
                 _isChecked = value!;
               });
             }),
-        CheckboxListTile(
+        CheckboxListTile.adaptive(
             title: const Text('click me'),
             value: _isChecked,
             onChanged: (bool? value) {
@@ -39,12 +39,12 @@ class _ProfilePageState extends State<ProfilePage> {
                 _isChecked = value!;
               });
             }),
-        Switch(value: _isSwitched, onChanged: (value){
+        Switch.adaptive(value: _isSwitched, onChanged: (value){
           setState(() {
             _isSwitched = value;
           });
         }),
-        SwitchListTile(
+        SwitchListTile.adaptive(
           title: const Text('switch me'),
             value: _isSwitched, onChanged: (bool value){
           setState(() {
