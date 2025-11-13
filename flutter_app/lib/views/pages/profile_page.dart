@@ -20,6 +20,28 @@ class _ProfilePageState extends State<ProfilePage> {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
+            Container(
+              width: 150,
+              height: 50,
+              color: Colors.blue.shade100,
+              child: const FittedBox(
+                // 默认 BoxFit.contain：在盒子里等比缩放
+                child: Text(
+                  'Hello Flutter',
+                  style: TextStyle(fontSize: 40, color: Colors.black),
+                ),
+              ),
+            ),
+            Container(
+              width: 200,
+              height: 80,
+              color: Colors.grey.shade300,
+              child: FittedBox(
+                fit: BoxFit.cover, // 试试 contain / cover / fill 的不同效果
+                child: Image.asset('assets/images/banner.png'),
+              ),
+            ),
+
             TextField(
               controller: _controller,
               decoration: const InputDecoration(
